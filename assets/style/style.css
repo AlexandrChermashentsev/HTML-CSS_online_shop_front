@@ -67,11 +67,14 @@ image {
     align-items: center;
     gap: 30px;
 }
-.logo-categories:hover .header__pop-up-menu {
+/* .logo-categories:hover .header__pop-up-menu {
     display: block;
-}
-.logo-categories:active .header__pop-up-menu {
+} */
+/* .logo-categories:active .header__pop-up-menu {
     display: block;
+} */
+.logo-categories {
+    cursor: pointer;
 }
 
 .header__pop-up-menu {

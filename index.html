@@ -16,11 +16,11 @@
                   </svg>
             </div>
             <div class="header_logos-right">
-                <div class="logo-categories">
+                <div class="logo-categories" onclick="hideDiv()">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="23" viewBox="0 0 32 23" fill="none">
                             <path d="M0 23V20.31H32V23H0ZM0 12.76V10.07H32V12.76H0ZM0 2.69V0H32V2.69H0Z" fill="#E8E8E8"/>
                           </svg>       
-                    <div class="header__pop-up-menu">
+                    <div class="header__pop-up-menu" id="burgerMenu_id">
                         <div class="pop-up-menu__content">
                             <h1 class="pop-up-menu__title">MENU</h1>
                             <div class="pop-up-menu">
@@ -220,14 +220,6 @@
                     <a href="" class="ctlg-item-price">$52.00</a>
                 </div>
             </div>
-            <script>
-                var number = 0;
-                function increaseNumber() {
-                    number++;
-                    document.getElementById("number-purchases").textContent = number;
-                    document.getElementById("red-circle").style.display = 'block';
-                }
-            </script>
         </div>
     </section>
 
@@ -325,5 +317,30 @@
             </div>
         </div>
     </section>
+
+
+    <script class="increaseNumberClass">
+        var number = 0;
+        function increaseNumber() {
+            number++;
+            document.getElementById("number-purchases").textContent = number;
+            document.getElementById("red-circle").style.display = 'block';
+        }
+    </script>
+    <script class="hideDivClass">
+        var obj = document.getElementById('burgerMenu_id');
+        function hideDiv() {
+            if (obj.style.display != 'block') obj.style.display = 'block';
+            else obj.style.display = 'none';
+        }
+    </script>
+    <!-- <script class="burgMnuClass">
+        function burgMnu(){
+            let div = document.querySelector('.header__pop-up-menu');
+            document.querySelector('.logo-categories').addEventListener('click', () => {
+            div.style.display = getComputedStyle(div).display == 'block' ? 'none' : 'block';
+            });
+        }
+    </script> -->
 </body>
 </html>
